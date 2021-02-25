@@ -32,14 +32,14 @@
 			</header>
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
-			
+
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
 					<h1>목포/무안/신안/영암/강진/해남/장흥/완도/진도<span> 설치 전문점<br />
 					나우누리CCTV보안시스템</span></h1>
 					<ul class="actions">
-						<li><a href="generic.html" class="button alt">직접 시공한 갤러리 가기</a></li>
+						<li><a href="https://blog.naver.com/mun0227m" class="button alt" target="_blank">직접 시공한 갤러리 가기</a></li>
 					</ul>
 				</div>
 			</section>
@@ -136,7 +136,7 @@
 					<header>
 						<h2>온라인 문의하기</h2>
 					</header>
-					<form method="post" action="#">
+					<form class="gform" method="post" data-email="gmuffiness@gmail.com" action="https://script.google.com/macros/s/AKfycbwPNzIMrr_04IhWCTxPsnQRpymFNqImZhEfgpjr/exec">
 						<div class="field half first">
 							<label for="name">성함</label>
 							<input type="text" name="name" id="name" />
@@ -150,29 +150,33 @@
 							<textarea name="message" id="message" rows="6"></textarea>
 						</div>
 						<ul class="actions">
-							<li><input type="submit" value="전송하기" class="alt" /></li>
+							<li><input type="submit" value="전송하기" class="alt"/></li>
 						</ul>
+						<div style="display:none" class="thankyou_message">
+						 <!-- You can customize the thankyou message by editing the code below -->
+						 <h2>문의사항이 전송되었습니다. 곧 연락 드리겠습니다.</h2>
+						</div>
 					</form>
-					<!-- <div class="copyright">
+					<div class="copyright">
 						&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
-					</div> -->
+					</div>
 				</div>
 			</section>
 			<div id="chu_copy">
 
 
 				<ul class="chu_copy_text">
-			
+
 					<li>전라남도 목포시 호남로 68번길 2-1(CCTV) l TEL : 061-242-3040(CCTV) | 사업자번호 : 411-14-40908</li>
 							<li>전라남도 목포시 대성동 마파지로 24-1 | 계좌번호 : (농협)317-3640-5367-01 | 예금주 : 문명근</li>
-			
+
 							<li>H.P : 010-3640-5367  l FAX : 061-984-3337 l E-mail : mun0227@hanmail.net l 대표자 : 문명근</li>
-			
-			
+
+
 					<li>Copyright &copy; 2017 나우누리CCTV보안시스템 All rights reserved.</li>
-			
+
 				</ul>
-			
+
 			</div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -182,11 +186,13 @@
 			<script>
 				jQuery(document).ready(function($) {
 
-				$(".scroll").click(function(event){            
+				$(".scroll").click(function(event){
 						event.preventDefault();
 						$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 				});
 				});
 			</script>
+			<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 	</body>
 </html>
