@@ -36,7 +36,7 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<h1>목포/무안/신안/영암/강진/해남/장흥/완도/진도/테스트<span> 설치 전문점<br />
+					<h1>목포/무안/신안/영암/강진/해남/장흥/완도/진도<span> 설치 전문점<br />
 					나우누리CCTV보안시스템</span></h1>
 					<ul class="actions">
 						<li><a href="https://blog.naver.com/mun0227m" class="button alt" target="_blank">직접 시공한 갤러리 가기</a></li>
@@ -136,7 +136,9 @@
 					<header>
 						<h2>온라인 문의하기</h2>
 					</header>
-					<form class="gform" method="post" data-email="gmuffiness@gmail.com">
+					<!-- <form class="gform" method="post" data-email="gmuffiness@gmail.com"> -->
+					<!-- <form class="gform" onsubmit="sendEmail(event)"> -->
+					<form name="contact" method="POST" data-netlify="true">
 						<div class="field half first">
 							<label for="name">성함</label>
 							<input type="text" name="name" id="name" />
@@ -149,9 +151,12 @@
 							<label for="message">문의 사항</label>
 							<textarea name="message" id="message" rows="6"></textarea>
 						</div>
-						<ul class="actions">
+						<!-- <ul class="actions">
 							<li><input type="submit" value="전송하기" class="alt"/></li>
-						</ul>
+						</ul> -->
+						<p>
+							<button type="submit">전송하기</button>
+						</p>
 						<div style="display:none" class="thankyou_message">
 						 <!-- You can customize the thankyou message by editing the code below -->
 						 <h2>문의사항이 전송되었습니다. 곧 연락 드리겠습니다.</h2>
@@ -162,6 +167,30 @@
 					</div>
 				</div>
 			</section>
+			
+			<script>
+				function sendEmail(event) {
+					event.preventDefault(); // 기본 제출 동작 방지
+				
+					var name = document.getElementById('name').value;
+					var email = document.getElementById('email').value;
+					var message = document.getElementById('message').value;
+				
+					var subject = '온라인 문의';
+					var body = "From: " + name + "\nE-Mail: " + email + "\nMessage:\n" + message;
+				
+					var mailtoLink = 'mailto:your_email@example.com' +
+									'?subject=' + encodeURIComponent(subject) +
+									'&body=' + encodeURIComponent(body);
+				
+					window.location.href = mailtoLink;
+				
+					// 감사 메시지 표시
+					var thankyouMessage = document.querySelector('.thankyou_message');
+					thankyouMessage.style.display = 'block';
+				}
+			</script>
+	
 			<div id="chu_copy">
 
 
